@@ -112,3 +112,69 @@
 .details-right::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
+
+@media screen and (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .details-left {
+    width: 100%;
+    height: auto; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details-image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .details-right {
+    padding: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .details-left {
+    width: 100%;
+    height: auto; /* Ensure no cropping */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details-image {
+    width: 100%;
+    max-width: 100%; /* Prevent horizontal overflow */
+    height: auto; /* Scale proportionally */
+    object-fit: contain; /* Fit the image within the space */
+  }
+
+  .details-right {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .details-title {
+    font-size: 28px; /* Adjust font size for readability */
+  }
+
+  .details-info {
+    font-size: 16px; /* Slightly smaller text for mobile */
+  }
+
+  .details-summary h2 {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  .details-summary p {
+    font-size: 14px; /* Adjust summary text size */
+  }
+}
